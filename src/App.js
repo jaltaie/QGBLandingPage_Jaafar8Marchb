@@ -19,13 +19,13 @@ class App extends Component {
         return (
             <Container fluid className="justify-content-center p-0 m-0">
                 <Banner />
-                <Container-fluid className="internal-page">
+                <Container className="internal-page">
                     <Carousel />
                     <Section2 />
                     <Section3 />
                     <Section4 />
                     <Section5 />
-                </Container-fluid>
+                </Container>
                 <Footer />
             </Container>
         );
