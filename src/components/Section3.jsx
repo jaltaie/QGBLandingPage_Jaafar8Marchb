@@ -65,13 +65,100 @@ const Section3 = () => {
     },
   ];
   return (
+
     <div className="section3-bg" id="section3">
+    <img alt="section3 right boxes" src={section3_right_boxes}
+         className="section3-right-boxes"/>
+    <Container className="section3-container">
+      <Row>
+        {
+          card_info_line_1.map((elem, index) => {
+            return (
+                <Col className="m-auto" key={index}>
+                  <a href={elem.link} target="_blank" rel="noreferrer">
+                    <Card className="section3-card mb-4 shadow-sm flex flex-col justify-between">
+                      <Card.Img variant="top" src={elem.img} className="shadow-lg"/>
+                      <Card.Body className="text-start">
+                        <Card.Title>
+                          {elem.title}
+                        </Card.Title>
+                        <Card.Text className="align-items-end">
+                          {elem.desc}
+                        </Card.Text>
+                      </Card.Body>
+                      <Card.Footer>
+                        <Row className="justify-content-between d-flex">
+                          <Col className="justify-content-start d-flex">
+                            <img src={elem.smallImageUrl}
+                                 alt={`${elem.title}`}
+                                 className="mb-2 align-self-end"/>
+                          </Col>
+                          <Col className="justify-content-end d-flex">
+                            <button className="font-bold align-self-end">
+                              سجل الآن
+                            </button>
+                          </Col>
+                        </Row>
+                      </Card.Footer>
+                    </Card>
+                  </a>
+                </Col>
+            )
+          })
+        }
+      </Row>
+      <Row>
+        {
+          card_info_line_2.map((elem, index) => {
+            return (
+              <Col className="" key={index}>
+                <a href={elem.link} key={index} target="_blank" rel="noreferrer">
+                  <Card className="section3-card shadow-sm flex flex-col justify-between">
+                    <Card.Img variant="top" src={elem.img} className="shadow-lg"/>
+                    <Card.Body className="text-start">
+                      <Card.Title>
+                        {elem.title}
+                      </Card.Title>
+                      <Card.Text className="align-items-end">
+                        {elem.desc}
+                      </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                      <Row className="justify-content-between d-flex">
+                        <Col className="justify-content-start d-flex">
+                          <img src={elem.smallImageUrl}
+                               alt={`${elem.title}`}
+                               className="mb-2 align-self-end"/>
+                        </Col>
+                        <Col className="justify-content-end d-flex">
+                          <button className="font-bold align-self-end">
+                            سجل الآن
+                          </button>
+                        </Col>
+                      </Row>
+                    </Card.Footer>
+                  </Card>
+                </a>
+              </Col>
+            )
+          })
+        }
+      </Row>
+    </Container>
+  </div>
+
+
+
+
+
+   
+/*     <div className="section3-bg" id="section3">
       <img alt="section3 right boxes" src={section3_right_boxes}
         className="section3-right-boxes" />
       <Container className="section3-container">
         <Row>
           {
-            card_info_line_1.map((elem, index) => {
+          card_info_line_1.map((elem, index) => {
               return (
                 <div className="col-lg-4 col-md-6 col-sx-12">
                   <a href="javascript:void(0)" key={index}>
@@ -144,7 +231,7 @@ const Section3 = () => {
           }
         </Row>
       </Container>
-    </div>
+    </div> */
   );
 };
 
